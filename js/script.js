@@ -621,6 +621,69 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 1000);
 });
 
+// Fungsi toggle menu mobile
+function toggleMobileMenu() {
+  const mobileMenu = document.getElementById('mobileMenu');
+  const mobileToggle = document.querySelector('.mobile-menu-toggle');
+  
+  mobileMenu.classList.toggle('active');
+  mobileToggle.classList.toggle('active');
+  
+  document.body.style.overflow = mobileMenu.classList.contains('active') 
+    ? 'hidden' 
+    : '';
+}
+
+// Inisialisasi event listener
+document.querySelector('.mobile-menu-toggle').addEventListener('click', toggleMobileMenu);
+
+// Smooth scrolling untuk semua anchor link
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    
+    if (target) {
+      window.scrollTo({
+        top: target.offsetTop - 80,
+        behavior: 'smooth'
+      });
+      
+      // Tutup mobile menu jika terbuka
+      if (window.innerWidth <= 768) {
+        toggleMobileMenu();
+      }
+    }
+  });
+});
+
+// Perbaikan active state saat scroll
+function updateActiveNavLink() {
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+  
+  let currentSection = '';
+  const scrollPosition = window.scrollY + 200;
+  
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+    
+    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+      currentSection = section.getAttribute('id');
+    }
+  });
+  
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === `#${currentSection}`) {
+      link.classList.add('active');
+    }
+  });
+}
+
+window.addEventListener('scroll', updateActiveNavLink);
+
 // Auto-slide every 8 seconds (optional)
 setInterval(autoSlide, 8000);
 
