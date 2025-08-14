@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details - Duyi Mardayanti Simanullang</title>
+    <meta name="description" content="Detailed view of projects by Duyi Mardayanti Simanullang - Full-Stack Developer & Project Management IT">
+    
+    <!-- Preload critical fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-container">
+                <a href="index.html" class="logo">Duyi</a>
+                
+                <ul class="nav-links">
+                    <li><a href="index.html#home" class="nav-link">Home</a></li>
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+                    <li><a href="index.html#projects" class="nav-link active">Projects</a></li>
+                    <li><a href="index.html#experience" class="nav-link">Experience</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+                
+                <button class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <a href="index.html#home" class="mobile-nav-link">Home</a>
+        <a href="index.html#about" class="mobile-nav-link">About</a>
+        <a href="index.html#skills" class="mobile-nav-link">Skills</a>
+        <a href="index.html#projects" class="mobile-nav-link active">Projects</a>
+        <a href="index.html#experience" class="mobile-nav-link">Experience</a>
+        <a href="index.html#contact" class="mobile-nav-link">Contact</a>
+    </div>
+
+    <!-- Back to Projects Button -->
+    <a href="index.html#projects" class="back-to-projects">
+        <i class="fas fa-arrow-left"></i>
+        Back to Projects
+    </a>
+
+    <!-- Project Details Page -->
+    <div class="project-details-page">
+        <div class="container">
+            <!-- Header -->
+            <div class="project-details-header">
+                <h1 class="project-details-title">Project Details</h1>
+                <p class="project-details-subtitle">Comprehensive overview of my development projects</p>
+                
+                <!-- Navigation -->
+                <div class="project-details-nav">
+                    <a href="#all" class="project-nav-btn active" data-filter="all">All Projects</a>
+                    <a href="#mobile" class="project-nav-btn" data-filter="mobile">Mobile Apps</a>
+                    <a href="#web" class="project-nav-btn" data-filter="web">Web Applications</a>
+                    <a href="#design" class="project-nav-btn" data-filter="design">UI/UX Design</a>
+                </div>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="project-details-grid">
+                <!-- Project 1: Nihou-Doc -->
+                <div class="project-detail-card" data-category="mobile">
+                    <div class="project-detail-image">
+                        <img src="images/project1.png" alt="Nihou-Doc Healthcare App" class="project-detail-img">
+                    </div>
+                    <div class="project-detail-content">
+                        <h3>Nihou-Doc</h3>
+                        <p>NihaoDoc Application is a final project from the Mobile Application Development course at Prasetiya Mulya, developed by a team of two full-stack developers. It’s a healthcare app enabling users to book and conduct online consultations with specialist doctors. Collaborating with junior students as clients, we built the app based on their high-fidelity UI design using Flutter. The project emphasizes a user-friendly and responsive interface. A key challenge was integrating the Flutter frontend with a Django backend to ensure seamless access to healthcare services.</p>
+                        
+                        <p><strong>Key Features:</strong></p>
+                        <ul>
+                            <li>Online doctor consultation with video calling</li>
+                            <li>Appointment booking and management system</li>
+                            <li>Patient medical history tracking</li>
+                            <li>Prescription management</li>
+                            <li>Real-time notifications</li>
+                            <li>Secure user authentication</li>
+                        </ul>
+                        <br>
+                        <p><strong>Technical Implementation:</strong> Built using Flutter for cross-platform mobile development and Django for robust backend services. The app features seamless API integration, real-time data synchronization, and a user-friendly interface designed with healthcare professionals and patients in mind.</p>
+                        
+                        <div class="project-detail-tech">
+                            <span class="tag">Flutter</span>
+                            <span class="tag">Django</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">REST API</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Mobile Development</span>
+                        </div>
+                        
+                        <div class="project-detail-links">
+                            <a href="https://github.com/duyisimanullang/Nihou_Doc" target="_blank" class="project-detail-link">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Weather Application -->
+                <div class="project-detail-card" data-category="mobile">
+                    <div class="project-detail-image">
+                        <img src="images/project2.png" alt="Weather Application" class="project-detail-img">
+                    </div>
+                    <div class="project-detail-content">
+                        <h3>Weather Application</h3>
+                        <p>A beautiful and intuitive weather application built with Flutter that provides real-time weather information for cities worldwide. The app features dynamic backgrounds that change based on current weather conditions, creating an immersive user experience.</p>
+                        
+                        <p><strong>Key Features:</strong></p>
+                        <ul>
+                            <li>Real-time weather data from OpenWeather API</li>
+                            <li>Dynamic background changes based on weather</li>
+                            <li>5-day weather forecast</li>
+                            <li>Global city search functionality</li>
+                            <li>Temperature, humidity, and wind speed display</li>
+                            <li>Responsive design for all screen sizes</li>
+                        </ul>
+                        <br>
+                        <p><strong>Technical Implementation:</strong> Developed using Flutter framework with integration to OpenWeather API for accurate weather data. Features include location-based services, custom animations, and optimized performance for both Android and iOS platforms.</p>
+                        
+                        <div class="project-detail-tech">
+                            <span class="tag">Flutter</span>
+                            <span class="tag">Dart</span>
+                            <span class="tag">OpenWeather API</span>
+                            <span class="tag">REST API</span>
+                            <span class="tag">Mobile Development</span>
+                        </div>
+                        
+                        <div class="project-detail-links">
+                            <a href="https://github.com/duyisimanullang/Wheater_Application-" target="_blank" class="project-detail-link">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Student Data Management -->
+                <div class="project-detail-card" data-category="mobile">
+                    <div class="project-detail-image">
+                        <img src="images/project3.png" alt="Student Data Management System" class="project-detail-img">
+                    </div>
+                    <div class="project-detail-content">
+                        <h3>Student Data Management System</h3>
+                        <p>Data Mahasiswa Application is a case study from the Mobile Application Development course at Prasetiya Mulya, focused on building a simple student database with full CRUD functionality. As a full-stack developer, I developed the app using Flutter and Django, based on a low-fidelity UI design. The main challenge was integrating Flutter with the Django backend to enable real-time data updates. Using Flutter’s Dio library, I implemented features to fetch, create, update, and delete student records. The result is a robust and user-friendly application for managing student information efficiently.
+
+Let me know if you'd like both summaries combined for a portfolio or tailored for a job application!</p>
+                        
+                        <p><strong>Key Features:</strong></p>
+                        <ul>
+                            <li>Complete CRUD operations for student data</li>
+                            <li>Real-time data synchronization</li>
+                            <li>User-friendly interface with intuitive navigation</li>
+                            <li>Data validation and error handling</li>
+                            <li>Search and filter functionality</li>
+                     
+                        </ul>
+                        <br>
+                        <p><strong>Technical Implementation:</strong> Built with Flutter using the Dio library for efficient API communication with a Django backend. The app ensures seamless data management with real-time updates and robust error handling.</p>
+                        
+                        <div class="project-detail-tech">
+                            <span class="tag">Flutter</span>
+                            <span class="tag">Django</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Dio Library</span>
+                            <span class="tag">CRUD Operations</span>
+                            <span class="tag">Database Management</span>
+                        </div>
+                        
+                        <div class="project-detail-links">
+                            <a href="https://github.com/duyisimanullang/Aplikasi-Data-Mahasiswa" target="_blank" class="project-detail-link">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Low Carbon School Platform -->
+                <div class="project-detail-card" data-category="web">
+                    <div class="project-detail-image">
+                        <img src="images/project4.png" alt="Low Carbon School Platform" class="project-detail-img">
+                    </div>
+                    <div class="project-detail-content">
+                        <h3>Menuju Sekolah Rendah Karbon</h3>
+<p>An innovative web-based educational platform developed in collaboration with Sekolah Tunas Global to support the transition toward Low Carbon and Sustainable Schools. This platform is designed to raise environmental awareness and actively engage students in reducing carbon footprints through interactive learning.</p>                        
+                        <p><strong>Key Features:</strong></p>
+                        <ul>
+                            <li>Real-time energy consumption monitoring</li>
+                            <li>Interactive educational content and videos</li>
+                            <li>Gamified reward system for sustainable practices</li>
+                            <li>Student progress tracking and analytics</li>
+                            <li>IoT integration for energy monitoring</li>
+                            <li>Responsive design for all devices</li>
+                        </ul>
+                        <br>
+                        <p><strong>Technical Implementation:</strong> Developed using React.js for the frontend with Node.js backend and PostgreSQL database. The platform integrates IoT sensors for real-time energy monitoring and features a user-centered design approach for engaging learning experiences.</p>
+                        
+                        <div class="project-detail-tech">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">HTML & CSS</span>
+                            <span class="tag">React.js</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">IoT Integration</span>
+                            <span class="tag">Sustainabilit=</span>
+                            <span class="tag">Education Technology</span>
+                            
+                        </div>
+                        
+                        <div class="project-detail-links">
+                            <a href="https://github.com/duyisimanullang/Project-Sekolah-Tunas-Global" target="_blank" class="project-detail-link">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: PetDoc Application Design -->
+                <div class="project-detail-card" data-category="design">
+                    <div class="project-detail-image">
+                        <img src="images/project5.jpg" alt="PetDoc Application Design" class="project-detail-img">
+                    </div>
+                    <div class="project-detail-content">
+                        <h3>PetDoc Application Design</h3>
+<p>PetDoc Application is a pet health app developed for the Business Innovation class at Prasetiya Mulya, aimed at providing fast and efficient support for pet owners facing health-related issues. As the UI/UX Designer, I created a user-friendly interface using Figma, focusing on intuitive layouts and smooth interactions. The app features a warm and inviting color palette—bright orange and soft yellow—to enhance user comfort and engagement, making pet health management easier and more accessible.
+</p>                        
+                        <p><strong>Design Features:</strong></p>
+                        <ul>
+                            <li>Vibrant color palette (bright orange and soft yellow)</li>
+                            <li>Intuitive user interface design</li>
+                            <li>Comprehensive user journey mapping</li>
+                         
+                            <li>Accessibility-focused design principles</li>
+                            <li>Mobile-first responsive design</li>
+                        </ul>
+                        <br>
+                        <p><strong>Design Process:</strong> Conducted user research, created user personas, developed wireframes and prototypes using Figma. The design emphasizes warmth and comfort through carefully chosen colors and typography that resonate with pet owners' emotional connection to their pets.</p>
+                        
+                        <div class="project-detail-tech">
+                            <span class="tag">Figma</span>
+                            <span class="tag">UI/UX Design</span>
+                            <span class="tag">Prototyping</span>
+                            <span class="tag">User Research</span>
+                            <span class="tag">Mobile Design</span>
+                           
+                        </div>
+                        
+                        <div class="project-detail-links">
+                            <a href="https://www.figma.com/design/hMahwRmQ9VL5TzCjNMuKxp/PetDoc?node-id=415-1384&t=lBCG3MnUA3FdTM8d-0" target="_blank" class="project-detail-link">
+                                <i class="fab fa-figma"></i> View on Figma
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: Youth Community -->
+                <div class="project-detail-card" data-category="web">
+                    <div class="project-detail-image">
+                        <img src="images/project4.png" alt="Low Carbon School Platform" class="project-detail-img">
+                    </div>
+                    <div class="project-detail-content">
+                        <h3>Youth Community</h3>
+<P>Youth Community is a dynamic and informative web platform designed to connect, inspire, and empower young individuals through shared experiences and community-driven activities. The website serves as a central hub for discovering youth communities, staying updated on upcoming events, and exploring engaging documentation of past activities.</P>                        
+                        <p><strong>Key Features:</strong></p>
+                        <ul>
+                            <li>- Community Directory</li>
+                            <li>I- Event Calendar & Registration</li>
+                            <li>- Activity Documentation</li>
+                            <li>- Interactive Blog & Stories</li>
+                            <li>IoT integration for energy monitoring</li>
+                            <li>Responsive design for all devices</li>
+                        </ul>
+                        <br>
+                        <p><strong>Technical Implementation:</strong> Developed using React.js for the frontend with Node.js backend and PostgreSQL database. The platform integrates IoT sensors for real-time energy monitoring and features a user-centered design approach for engaging learning experiences.</p>
+                        
+                        <div class="project-detail-tech">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                        </div>
+                        
+                        <div class="project-detail-links">
+                            <a href="https://github.com/duyisimanullang/Wecoming_Party_2025" target="_blank" class="project-detail-link">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Duyi Mardayanti Simanullang</h3>
+                    <p>Full-Stack Developer & Project Management IT</p>
+                    <p>Creating digital experiences with modern technologies and innovative solutions.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <a href="index.html#about">About</a>
+                    <a href="index.html#skills">Skills</a>
+                    <a href="index.html#projects">Projects</a>
+                    <a href="index.html#experience">Experience</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+                
+                <div class="footer-social">
+                    <h3>Connect With Me</h3>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/duyi2" target="_blank" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/duyisimanullang" target="_blank" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://twitter.com/duyisimanullang" target="_blank" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://instagram.com/duyisimanullang" target="_blank" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Duyi Mardayanti Simanullang. All rights reserved. Built with ❤️ and modern web technologies.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+    <script>
+        // Project filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.project-nav-btn');
+            const projectCards = document.querySelectorAll('.project-detail-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filter = this.getAttribute('data-filter');
+                    
+                    projectCards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                            card.style.display = 'block';
+                            card.style.animation = 'fadeIn 0.5s ease-in-out';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
