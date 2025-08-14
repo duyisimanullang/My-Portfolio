@@ -770,14 +770,14 @@ p {
 
 .timeline-date {
   position: absolute;
-  top: 20px;
-  width: 120px;
+  top: 10px;
+  width: 100px;
   background: var(--gradient-primary);
   color: var(--pure-white);
   padding: var(--space-xs) var(--space-sm);
   border-radius: var(--radius-sm);
-  font-weight: 600;
-  font-size: 0.9rem;
+  font-weight: 500;
+  font-size: 0.8rem;
   text-align: center;
 }
 
@@ -1124,11 +1124,15 @@ p {
   }
   
   .timeline-item {
+
     padding-left: 40px !important;
   }
   
   .timeline-date {
-    left: -50px !important;
+    position: relative;
+margin-left: 0;
+margin-bottom: 15px;
+    
     font-size: 0.8rem;
     padding: 4px 8px;
   }
@@ -1578,7 +1582,7 @@ p {
     
 
     .certificate-card img {
-      width: 250px;
+      width: 300px;
       height: auto;
       margin-bottom: 5px;
     }
@@ -1597,11 +1601,15 @@ p {
 
     @media (max-width: 600px) {
       .certificate-card {
-        padding: 15px;
+        padding: 5px;
+        text-align: center;
+        justify-content: center;
       }
 
       .certificate-card img {
-        width: 60px;
+        justify-items: center;
+
+        width: 260px;
       }
 
       .certificate-card a {
@@ -1661,17 +1669,41 @@ p {
 }
 /* Perbaikan umum untuk semua perangkat */
 @media (max-width: 480px) {
+
+
+.hero-content, .about-content, .contact-content {
+  grid-template-columns: 1fr; /* This overrides it */
+}
+
+
   .hero-content {
     flex-direction: column;
     text-align: center;
   }
+  .fade-in {
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
   
   .hero-cta {
     justify-content: center;
   }
   
   .about-content {
+    padding-top: 2rem;
+    padding-bottom: 0px;
     grid-template-columns: 1fr;
+  }
+
+  .about-image {
+    position: relative;
+    bottom: 0;
+    margin-bottom: 0rem;
+  }
+  .about-text {
+    text-align: center;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
   
   .skills-grid {
@@ -1686,6 +1718,8 @@ p {
     width: 100%;
     padding: 0;
   }
+
+
   
   .certificate-grid {
     grid-template-columns: 1fr;
