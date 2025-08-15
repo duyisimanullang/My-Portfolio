@@ -486,6 +486,7 @@ p {
 }
 
 .stat-item {
+  margin-bottom: 20px;
   text-align: center;
   padding: var(--space-md);
   background: var(--dark-gray);
@@ -511,6 +512,11 @@ p {
   color: var(--light-gray);
   font-size: 0.9rem;
 }
+.hero-cta2{
+  padding-top: 30px;
+  align-items: end;
+}
+
 
 /* Skills Section */
 .skills {
